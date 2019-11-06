@@ -56,4 +56,8 @@ public class RatesDTO {
         }
         return count;
     }
+
+    public double getEuro(){
+       return getRates().get("EUR");
+    }
 }

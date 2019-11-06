@@ -14,12 +14,12 @@ public class RatesDeserialiser {
 
     public RatesDTO ratesMapped;
 
-    public RatesDeserialiser(String fileLocation) {
+    public RatesDeserialiser(String jsonString) {
 
         ObjectMapper objectMapper = new ObjectMapper();
 
         try {
-            ratesMapped=objectMapper.readValue(new File(fileLocation),RatesDTO.class);
+            ratesMapped=objectMapper.readValue(jsonString,RatesDTO.class);
         } catch (IOException e) {
             e.printStackTrace();
         }
